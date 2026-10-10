@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>Đọc truyện | CloudManga</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a class="logo" href="./index.html">
+      ☁ Cloud<span>Manga</span>
+    </a>
+
+    <a id="backToDetail"
+       class="btn btn-outline"
+       href="./index.html">
+      ← Chi tiết truyện
+    </a>
+  </header>
+
+  <main class="reader-container">
+
+    <div class="reader-heading">
+      <span class="eyebrow">CLOUDMANGA READER</span>
+      <h1 id="readerTitle">Đang tải chương...</h1>
+      <p id="readerInfo"></p>
+    </div>
+
+    <div class="reader-navigation">
+      <button id="prevChapter" class="btn btn-outline">
+        ← Chương trước
+      </button>
+
+      <button id="nextChapter" class="btn btn-primary">
+        Chương sau →
+      </button>
+    </div>
+
+    <p id="readerStatus" class="status">
+      Đang tải ảnh từ Amazon S3...
+    </p>
+
+    <div id="readerPages" class="reader-pages"></div>
+
+    <div class="reader-navigation">
+      <button id="prevChapterBottom" class="btn btn-outline">
+        ← Chương trước
+      </button>
+
+      <button id="nextChapterBottom" class="btn btn-primary">
+        Chương sau →
+      </button>
+    </div>
+
+  </main>
+
+  <footer>
+    © 2026 CloudManga · AWS Capstone Project
+  </footer>
+
+  <script src="./config.js"></script>
+  <script src="./reader.js"></script>
+
+</body>
+</html>

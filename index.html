@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CloudManga | Manga Library</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="/">☁ Cloud<span>Manga</span></a>
+
+    <nav class="nav">
+      <a href="#library">Thư viện</a>
+      <a href="#about">Giới thiệu</a>
+    </nav>
+
+    <div class="account" id="account">
+      <button id="loginBtn" class="btn btn-outline">Đăng nhập</button>
+      <button id="signupBtn" class="btn btn-primary">Đăng ký</button>
+
+      <span id="username" class="username hidden"></span>
+      <button id="logoutBtn" class="btn btn-outline hidden">Đăng xuất</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">WELCOME TO CLOUDMANGA</span>
+        <h1>Thế giới manga<br><span>trong tầm tay.</span></h1>
+        <p>
+          Khám phá thư viện truyện và chia sẻ những đánh giá
+          của bạn. Xây dựng trên nền tảng AWS Cloud.
+        </p>
+        <a class="btn btn-primary explore-btn" href="#library">
+          Khám phá ngay →
+        </a>
+      </div>
+      <div class="hero-art">雲<br>漫画</div>
+    </section>
+
+    <section id="library" class="library">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">OUR COLLECTION</span>
+          <h2>Thư viện Manga</h2>
+        </div>
+        <span id="mangaCount" class="count">Đang tải...</span>
+      </div>
+
+      <div class="search-bar">
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Tìm kiếm manga..."
+        >
+      </div>
+
+      <div id="status" class="status">Đang kết nối AWS...</div>
+      <div id="mangaGrid" class="manga-grid"></div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>Về CloudManga</h2>
+      <p>
+        CloudManga là ứng dụng demo sử dụng Amazon S3,
+        AWS Lambda, Amazon API Gateway, Amazon Cognito
+        và Amazon DynamoDB.
+      </p>
+    </section>
+  </main>
+
+  <footer>© 2026 CloudManga · AWS Capstone Project</footer>
+
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết truyện | CloudManga</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a class="logo" href="./index.html">
+      ☁ Cloud<span>Manga</span>
+    </a>
+
+    <nav class="nav">
+      <a href="./index.html#library">Thư viện</a>
+      <a href="./index.html#about">Giới thiệu</a>
+    </nav>
+
+    <a class="btn btn-outline" href="./index.html#library">
+      ← Quay lại
+    </a>
+  </header>
+
+  <main class="detail-container">
+    <p id="detailStatus" class="status">
+      Đang tải thông tin truyện từ AWS...
+    </p>
+
+    <section id="detailContent" class="hidden">
+
+      <div class="detail-header">
+
+        <div class="detail-cover">
+          <img id="detailCover" alt="Ảnh bìa truyện">
+        </div>
+
+        <div class="detail-info">
+          <span class="eyebrow">MANGA DETAILS</span>
+
+          <h1 id="detailTitle"></h1>
+
+          <p>
+            <strong>Thể loại:</strong>
+            <span id="detailGenre"></span>
+          </p>
+
+          <p>
+            <strong>Số chương:</strong>
+            <span id="detailChapters"></span>
+          </p>
+
+          <p id="detailDescription"></p>
+        </div>
+      </div>
+
+      <div class="chapter-section">
+        <h2>Danh sách chương</h2>
+
+        <p class="chapter-note">
+          Danh sách chương được lấy từ thông tin truyện.
+          Nội dung đọc sẽ được kết nối với Amazon S3
+          ở bước tiếp theo.
+        </p>
+
+        <div id="chapterList" class="chapter-list"></div>        
+            <section class="reviews-section" id="reviews">
+            <div class="reviews-heading">
+                <div>
+                <span class="eyebrow">COMMUNITY REVIEWS</span>
+                <h2>Đánh giá truyện</h2>
+                </div>
+                <div class="rating-summary">
+                <span id="averageRating">★ 0.0</span>
+                <span id="reviewCount">0 đánh giá</span>
+                </div>
+            </div>
+
+            <div id="reviewFormArea" class="review-form-area">
+                <h3>Đánh giá của bạn</h3>
+                <p id="reviewLoginMessage" class="review-hint"></p>
+
+                <form id="reviewForm">
+                <div class="star-rating" id="starRating">
+                    <button type="button" data-rating="1" aria-label="1 sao">★</button>
+                    <button type="button" data-rating="2" aria-label="2 sao">★</button>
+                    <button type="button" data-rating="3" aria-label="3 sao">★</button>
+                    <button type="button" data-rating="4" aria-label="4 sao">★</button>
+                    <button type="button" data-rating="5" aria-label="5 sao">★</button>
+                </div>
+
+                <textarea
+                    id="reviewComment"
+                    maxlength="500"
+                    rows="4"
+                    placeholder="Viết nhận xét về bộ truyện..."
+                ></textarea>
+
+                <button type="submit" class="btn btn-primary" id="submitReview">
+                    Gửi đánh giá
+                </button>
+                </form>
+        </div>
+
+        <h3>Nhận xét từ cộng đồng</h3>
+        <p id="reviewsStatus" class="review-hint">Đang tải đánh giá...</p>
+        <div id="reviewsList" class="reviews-list"></div>
+        </section>
+
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    © 2026 CloudManga · AWS Capstone Project
+  </footer>
+
+  <script src="./config.js"></script>
+  <script src="./detail.js"></script>
+  <script src="./reviews.js"></script>
+
+</body>
+</html>
